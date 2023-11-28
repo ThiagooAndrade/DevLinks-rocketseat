@@ -72,68 +72,35 @@ body * {
 
 /* switch */
 
-#switch-container {
-  margin: auto;
-  display: flex;
+#switch {
+  margin: 4px auto;
   width: 64px;
-  height: 60px;
-  padding: 0 20px;
   position: relative;
-  align-items: center;
-  justify-content: center;
   border: 1px solid red;
 }
 
-.switch {
-  position: absolute;
-  display: flex;
-  width: 64px;
-  height: 40px;
-  padding-left: 10px;
-  z-index: 3;
-}
-
-.button-hover {
-  padding: 32px;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 3;
-  top: 50%;
-  left: 0px;
-  transition: background 0.5s ease;
-}
-
-.button-hover:hover{
-  background: var(--highlight-color);
-}
-
-
-.button-hover button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#switch button {
   width: 32px;
   height: 32px;
   background: white var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
+
   position: absolute;
   top: 50%;
-  left: 20px;
+  left: -2px;
   z-index: 1;
   transform: translateY(-50%);
 }
 
 
-.light .button-hover button {
-  right: 20px;
+.light #switch button {
+  right: -2px;
   left: initial;
 }
 
 
-
-
-.track {
+#switch span {
   display: block;
   width: 64px;
   height: 24px;
