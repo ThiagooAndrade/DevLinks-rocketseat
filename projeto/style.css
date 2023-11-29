@@ -11,7 +11,6 @@
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
   --highlight-color: rgba(255, 255, 255, 0.2);
-
 }
 
 .light {
@@ -48,8 +47,6 @@ body * {
   width: 100%;
   max-width: 588px;
   margin: 56px auto 0px;
-  
-
 }
 
 /*profile*/
@@ -88,21 +85,20 @@ body * {
 
   position: absolute;
   top: 50%;
-  left: -2px;
+  left: 0;
   z-index: 1;
   transform: translateY(-50%);
-  animation: slide-back 0.2s;
+  animation: slide-back 0.4s;
 }
 
-
 .light #switch button {
-  right: -2px;
-  left: initial;
+  animation: slide-in 0.4s forwards;
 }
 
 #switch button:hover {
   outline: 8px solid var(--highlight-color);
 }
+
 
 
 #switch span {
@@ -115,7 +111,6 @@ body * {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
 }
-
 
 ul {
   list-style: none;
@@ -188,10 +183,29 @@ footer span {
 /* media queries */
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(./assets/bg-desktop.jpg)
+    --bg-url: url(./assets/bg-desktop.jpg);
   }
 
   .light {
-    --bg-url: url(./assets/bg-desktop-light.jpg)
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 54%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 54%;
+  }
+  to {
+    left: 0;
   }
 }
